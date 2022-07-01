@@ -16,12 +16,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if dir != Vector2.ZERO:
-#		print(velocity, dir)
-		position += dir * velocity * delta
+		position.x += dir.x * velocity.x * delta
 		position.x = clamp(position.x, 0, 480)
 		dir = Vector2.ZERO
-	if Input.is_action_pressed("ui_accept"):
-		print("space")
+#	if Input.is_action_pressed("ui_accept"):
+#		print("space")
 
 
 func _input(event):
@@ -31,17 +30,9 @@ func _input(event):
 			dir = Vector2.RIGHT
 		else:
 			dir = Vector2.LEFT
-#		print("Move")
-	if event is InputEventScreenTouch and not event.is_pressed():
+	if event is InputEventScreenTouch and event.is_pressed():
 		if dir == Vector2.ZERO or event.index >= 1:
-			print("shoot")
-#			print(event.index)
-#			print(get_parent())
 			gun.shoot()
-#			var bul = bullet.instantiate()
-#			bul.position = position
-#			get_node('/root/deep_space').add_child(bul)
-
 
 func set_weapon():
 	gun = parent_space.weapons[0].instantiate()

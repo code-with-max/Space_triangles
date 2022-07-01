@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbamvlkchir70"]
+
+[ext_resource type="Script" path="res://weapons/simple_gun/simple_gun.gd" id="1_nfrkc"]
+[ext_resource type="PackedScene" uid="uid://cccyvrbkf6c0m" path="res://weapons/bullet.tscn" id="2_an38p"]
+[ext_resource type="AudioStream" uid="uid://kl4tth5drcr5" path="res://weapons/simple_gun/laser1.mp3" id="3_ise6c"]
+
+[node name="simple_gun" type="Node2D"]
+z_index = 6
+script = ExtResource( "1_nfrkc" )
+bullet = ExtResource( "2_an38p" )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( "3_ise6c" )
+
+[node name="reload_time" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="gun_body_poly" type="Polygon2D" parent="."]
+color = Color(0.0627451, 0.0627451, 1, 1)
+polygon = PackedVector2Array(4, -4, -4, -4, -2, 16, 2, 16)
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2(0, -5)
+
+[connection signal="timeout" from="reload_time" to="." method="_on_reload_time_timeout"]

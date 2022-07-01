@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmkiffrj15qwo"]
+
+[ext_resource type="Script" path="res://hero/hero.gd" id="1_5h7qk"]
+[ext_resource type="Texture2D" uid="uid://bpopl352s7nmt" path="res://hero/spacecraft-space-ship-svgrepo-com.svg" id="1_xrs0c"]
+[ext_resource type="PackedScene" uid="uid://cccyvrbkf6c0m" path="res://weapons/bullet.tscn" id="2_jgevv"]
+
+[node name="Hero" type="Node2D"]
+z_index = 8
+script = ExtResource( "1_5h7qk" )
+bullet = ExtResource( "2_jgevv" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource( "1_xrs0c" )
+
+[node name="gun_handler" type="Position2D" parent="."]
+position = Vector2(-46, -8)

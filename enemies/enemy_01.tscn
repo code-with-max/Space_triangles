@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnfe7k445bce1"]
+
+[ext_resource type="Script" path="res://enemies/enemy_01.gd" id="1_qptwt"]
+[ext_resource type="Texture2D" uid="uid://ckp3bag6112dx" path="res://enemies/spaceShips_001.png" id="2_bmsal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8b2k"]
+size = Vector2(72, 44)
+
+[node name="Enemy_01" type="Node2D" groups=["enemies"]]
+z_index = 7
+script = ExtResource( "1_qptwt" )
+start_positions = [Vector2(100, 60), Vector2(200, 80), Vector2(300, 50)]
+
+[node name="choose_dir_timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource( "2_bmsal" )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( "RectangleShape2D_s8b2k" )
+
+[connection signal="timeout" from="choose_dir_timer" to="." method="_on_choose_dir_timer_timeout"]

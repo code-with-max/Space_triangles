@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Deep Space 4"
+run/main_scene="res://deep_space.tscn"
+config/features=PackedStringArray("4.0", "Vulkan Mobile")
+config/icon="res://icon.png"
+
+[autoload]
+
+GD="*res://global_data.gd"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=640
+window/handheld/orientation=5
+window/stretch/mode="viewport"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
+
+[layer_names]
+
+2d_physics/layer_1="space"
+2d_physics/layer_2="enemies"
+2d_physics/layer_3="bullet"
+2d_physics/layer_4="hero"
+
+[rendering]
+
+vulkan/rendering/back_end=1

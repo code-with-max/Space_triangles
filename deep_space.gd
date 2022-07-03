@@ -1,5 +1,8 @@
 extends Node2D
 
+const DEBUG = true
+
+
 @export var window_size = Vector2(480, 640)
 @export var far_away_spawn_time = 3
 @export var far_away_star_count = 5
@@ -25,8 +28,9 @@ extends Node2D
 func _ready():
 #	Set wait_time for far stars spawner (default 1 sec)
 	$far_away_stars_spawn.set_wait_time(far_away_spawn_time)
-#	Uncomment it for regraw debug window
-	redraw_debug()
+	if DEBUG:
+		$Debug_info.show()
+		redraw_debug()
 	var hero = heroes.instantiate()
 	add_child(hero)
 
@@ -69,5 +73,5 @@ func _on_far_away_stars_spawn_timeout():
 		var enemy = enemies[0].instantiate()
 		add_child(enemy)
 #		Set X position (Default is 0)
-#	Uncomment it for regraw debug window
-	redraw_debug()
+	if DEBUG:
+		redraw_debug()

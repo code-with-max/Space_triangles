@@ -7,16 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://dmkiffrj15qwo" path="res://hero/hero.tscn" id="5_ob67f"]
 [ext_resource type="PackedScene" uid="uid://bbamvlkchir70" path="res://weapons/simple_gun/simple_gun.tscn" id="6_mcte0"]
 [ext_resource type="PackedScene" uid="uid://bnfe7k445bce1" path="res://enemies/enemy_01.tscn" id="7_dqfys"]
-[ext_resource type="Texture2D" uid="uid://ddopkj3sc8t74" path="res://space.png" id="8_a5yhd"]
+[ext_resource type="Texture2D" uid="uid://baigpfnx7nlw7" path="res://space.png" id="8_a5yhd"]
 
 [node name="deep_space" type="Node2D"]
-script = ExtResource( "1_6o3it" )
-far_away_stars = ExtResource( "2_1ovc4" )
-far_stars = ExtResource( "3_ktej5" )
-planets = ExtResource( "3_loeus" )
-heroes = ExtResource( "5_ob67f" )
-weapons = [ExtResource( "6_mcte0" )]
-enemies = [ExtResource( "7_dqfys" )]
+script = ExtResource("1_6o3it")
+far_away_stars = ExtResource("2_1ovc4")
+far_stars = ExtResource("3_ktej5")
+planets = ExtResource("3_loeus")
+heroes = ExtResource("5_ob67f")
+weapons = [ExtResource("6_mcte0")]
+enemies = [ExtResource("7_dqfys")]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -33,9 +33,10 @@ offset_right = 600.0
 offset_bottom = 972.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource( "8_a5yhd" )
+texture = ExtResource("8_a5yhd")
 
 [node name="Debug_info" type="VBoxContainer" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 

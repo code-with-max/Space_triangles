@@ -1,0 +1,16 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kl4tth5drcr5"
+path="res://.godot/imported/laser1.mp3-a2d752571a09be4a6ea6d238c55f87b7.mp3str"
+
+[deps]
+
+source_file="res://weapons/simple_gun/laser1.mp3"
+dest_files=["res://.godot/imported/laser1.mp3-a2d752571a09be4a6ea6d238c55f87b7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0

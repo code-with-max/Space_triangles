@@ -8,7 +8,7 @@ extends Node2D
 
 # Planet sprite
 # 	Load from inspector:
-@export var planet_sprite: Array[Texture2D]
+#@export var planet_sprite: Array[Texture2D]
 # 	or load from code:
 #var planet_sprite = [
 #	preload("res://far_away_planet/g887.png"),
@@ -27,7 +27,7 @@ func _ready():
 	set_scale(random_choice(planet_scaling))
 	
 #	Load planet sprites from array (No Default)
-	$Sprite2D.set_texture(random_choice(planet_sprite))
+#	$Sprite2D.set_texture(random_choice(planet_sprite))
 	
 	
 

@@ -1,22 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://c06e5lpyskuv7"]
+[gd_scene load_steps=7 format=3 uid="uid://c06e5lpyskuv7"]
 
 [ext_resource type="Script" path="res://deep_space.gd" id="1_6o3it"]
 [ext_resource type="PackedScene" uid="uid://brt5ow75yi6cx" path="res://far_away_stars/star_01.tscn" id="2_1ovc4"]
-[ext_resource type="PackedScene" uid="uid://ddgxfnsrtbr3s" path="res://far_away_stars/star_02.tscn" id="3_ktej5"]
 [ext_resource type="PackedScene" uid="uid://b6puvvwxbklea" path="res://far_away_planet/far_away_planet.tscn" id="3_loeus"]
 [ext_resource type="PackedScene" uid="uid://dmkiffrj15qwo" path="res://hero/hero.tscn" id="5_ob67f"]
 [ext_resource type="PackedScene" uid="uid://bbamvlkchir70" path="res://weapons/simple_gun/simple_gun.tscn" id="6_mcte0"]
-[ext_resource type="PackedScene" uid="uid://bnfe7k445bce1" path="res://enemies/enemy_01.tscn" id="7_dqfys"]
-[ext_resource type="Texture2D" uid="uid://baigpfnx7nlw7" path="res://space.png" id="8_a5yhd"]
+[ext_resource type="Texture2D" uid="uid://ddopkj3sc8t74" path="res://space.png" id="8_a5yhd"]
 
 [node name="deep_space" type="Node2D"]
 script = ExtResource("1_6o3it")
 far_away_stars = ExtResource("2_1ovc4")
-far_stars = ExtResource("3_ktej5")
+far_stars = ExtResource("2_1ovc4")
 planets = ExtResource("3_loeus")
 heroes = ExtResource("5_ob67f")
 weapons = [ExtResource("6_mcte0")]
-enemies = [ExtResource("7_dqfys")]
+enemies = []
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false

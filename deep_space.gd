@@ -29,6 +29,7 @@ func _ready():
 #	Set wait_time for far stars spawner (default 1 sec)
 	$far_away_stars_spawn.set_wait_time(far_away_spawn_time)
 	if DEBUG:
+		print("start")
 		$Debug_info.show()
 		redraw_debug()
 	var hero = heroes.instantiate()

@@ -1,13 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://brt5ow75yi6cx"]
+[gd_scene load_steps=3 format=3 uid="uid://brt5ow75yi6cx"]
 
 [ext_resource type="Script" path="res://far_away_stars/star_01.gd" id="1_citde"]
-[ext_resource type="FontData" uid="uid://bg2pmtsc04s81" path="res://Roboto-Regular.ttf" id="3_ujd1y"]
-
-[sub_resource type="Font" id="Font_8muvg"]
-data/0 = ExtResource("3_ujd1y")
 
 [sub_resource type="Theme" id="Theme_emm28"]
-default_font = SubResource("Font_8muvg")
 default_font_size = 12
 
 [node name="Star_01" type="Node2D" groups=["far_away_stars"]]

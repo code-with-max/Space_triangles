@@ -10,3 +10,5 @@ bullet = ExtResource("2_jgevv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
+
+[node name="gun_handler" type="Position2D" parent="."]

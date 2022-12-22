@@ -6,12 +6,12 @@
 
 [node name="Hero" type="Node2D"]
 z_index = 8
-script = ExtResource( "1_5h7qk" )
-bullet = ExtResource( "2_jgevv" )
+script = ExtResource("1_5h7qk")
+bullet = ExtResource("2_jgevv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource( "1_xrs0c" )
+texture = ExtResource("1_xrs0c")
 
-[node name="gun_handler" type="Position2D" parent="."]
+[node name="gun_handler" type="Marker2D" parent="."]
 position = Vector2(-46, -8)
